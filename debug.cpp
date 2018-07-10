@@ -5,7 +5,7 @@
  * Copyright 2017-2018 Paulo Perbone
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
+ * you may not  use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
@@ -17,7 +17,31 @@
  * limitations under the License
  */
 
-#pragma once
+#include "debug.h"
 
-void register_luascript_types();
-void unregister_luascript_types();
+#if defined(LUA_SCRIPT_DEBUG_ENABLED)
+
+void print_debug(const String fmt, ...) {
+
+	char fmtbuf[fmt.size()], tmpbuf[256], finalbuf[512];
+
+	wcstombs(fmtbuf, fmt.c_str(), fmt.size());
+
+	sprintf(tmpbuf, "%d %2d %2d ",
+			OS::get_singleton()->get_unix_time(),
+			Thread::get_main_id(),
+			Thread::get_caller_id());
+
+	strcat(tmpbuf, fmtbuf);
+
+	va_list ap;
+	va_start(ap, fmt);
+
+	vsprintf(finalbuf, tmpbuf, ap);
+
+	va_end(ap);
+
+	print_line(finalbuf);
+}
+
+#endif

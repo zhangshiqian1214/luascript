@@ -5,7 +5,7 @@
  * Copyright 2017-2018 Paulo Perbone
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
+ * you may not  use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
@@ -19,5 +19,10 @@
 
 #pragma once
 
-void register_luascript_types();
-void unregister_luascript_types();
+#include "core/ustring.h"
+
+const String EMPTY_STRING = "";
+const String SCRIPT_TYPE = "Script";
+const String LUA_NAME = "Lua";
+const String LUA_TYPE = "LuaScript";
+const String LUA_EXTENSION = "lua";
