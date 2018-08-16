@@ -7,7 +7,30 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## 0.0.17 - 2018-06-28
+## 0.0.21 - 2018-08-11
+
+### Changed
+
+- LuaScriptLanguage to support new 3.1 'validation' with warnings method signature
+
+## 0.0.20 - 2018-07-23
+
+### Added
+
+- Add pegtl dependency source code
+- Add basic support for script validation
+
+### Removed
+
+- Remove lpeg dependency
+
+## 0.0.19 - 2018-07-22
+
+### Changed
+
+- LuaScriptLanguage to support new 3.1 'validation' method signature
+
+## 0.0.18 - 2018-06-28
 
 ### Changed
 
