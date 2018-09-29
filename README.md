@@ -1,10 +1,10 @@
 # LuaScript [![License](https://img.shields.io/:license-apache-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Lua 5.4 language support for Godot Engine
+Lua 5.4 language support for Godot Engine 3.1 and later
 
 > WIP (heavily updated so you can expect constants changes - no commitment with feature freezing at this moment)
 
-> Next step: to plan the stories backlog based on the feature list
+> Current progress: Currently I'm experimenting with parsers. The one I'm testing right is the PEGTL C++ library. With this in place it will be possible to start answering engine call backs, like for example, _ready(), _process() etc.
 
 ## Features
 
