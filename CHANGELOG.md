@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## 0.0.25 - 2019-01-04
+
+### Added
+
+- Add new Script::is_valid() method (fix broken compilation for 3.1-alphas)
+
+## 0.0.24 - 2018-10-11
+
+### Changed
+
+- Bump to C++17 standard due use of PEGTL 3.0 dependency library
+- Update PEGTL library from master (3.0-rc)
+
 ## 0.0.23 - 2018-09-15
 
 ### Fixed
@@ -17,7 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- Update pegtl library from master
+- Update PEGTL library from master
 
 ### Fixed
 
@@ -33,7 +46,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Add pegtl dependency source code
+- Add PEGTL dependency source code
 - Add basic support for script validation
 
 ### Removed
